@@ -1,0 +1,597 @@
+---
+title: "Keras_Intro_Basics"
+output: github_document
+---
+
+
+
+### Keras
+
+
+- 빠른 모형 프로토타이핑을 통한 연구 효율 증대
+- API사용이 쉽고 오사용으로 인한 시행착오를 줄여준다.
+- GPU, CPU 모두 사용 가능
+- 다양한 backend 활용 가능
+
+
+#### R interface to Keras
+
+- Python 버전의 Keras를 R에서 활용 가능하게 Wrapping한 패키지
+- R의 강점을 딥러닝을 하는데 활용 가능
+- 간결한 API, 복잡한 import사용을 하지 않아도 된다.
+- reticulate 기반으로 동작해 keras의 최신 기능을 바로 활용 가능하다.
+
+
+
+### Keras 설치
+
+```
+devtools::install_github("rstudio/keras")
+library(keras)
+install_tensorflow()
+```
+
+### A first neural network in Keras
+
+```{r}
+library(keras)
+library(reticulate)
+```
+
+#### 데이터 로딩과 샘플 플로팅
+
+
+```{r}
+batch_size <- 32
+num_classes <- 10
+epochs <- 10
+
+# the data, shuffled and split between train and test sets
+mnist <- dataset_mnist()
+x_train <- mnist$train$x
+y_train <- mnist$train$y
+x_test <- mnist$test$x
+y_test <- mnist$test$y
+```
+
+```{r}
+x_train <- array(as.numeric(x_train), dim = c(dim(x_train)[[1]], 784))
+x_test <- array(as.numeric(x_test), dim = c(dim(x_test)[[1]], 784))
+
+# convert class vectors to binary class matrices
+y_train <- to_categorical(y_train, num_classes)
+y_test <- to_categorical(y_test, num_classes)
+
+
+print(sprintf("x_train dimension : %d, %d", dim(x_train)[1], dim(x_train)[2]))
+print(sprintf("y_train dimension : %d, %d", dim(y_train)[1], dim(y_train)[2]))
+
+```
+
+
+```{r}
+plot_examples <- function(data, labels, model_predict){
+    par(mfrow=c(2,4))
+    for(i in 1:8){
+        idx <- sample(seq(dim(data)[1]), 1)
+        lab <- paste0("num: " , which.max(labels[idx,]) - 1 , "," , which.max(model_predict[idx,]) - 1)
+        image(t(apply(array(data[idx,], dim = c(28,28)), 2, rev)),
+              col=paste("gray",1:99,sep=""),main=lab)
+    }
+}
+
+plot_examples(x_train, y_train, y_train)
+```
+
+
+#### Building a first Keras model
+
+* 간단한 3층의 앞먹임(feedforward) 네트워크 
+* 3 step:
+    + 모델 빌드
+        - 옵티마이저(optimizer)와 로스(loss)를 기반으로 모델 컴파일
+            - 모형에 저장된 가중치와 바이어스에 영향 없이 learning rate와 optimizer 등의 설정을 바꿀 수 있다. 
+        - `model %>% fit`을 호출해 학습을 시작한다. 
+
+
+
+```{r}
+# Keras는 두가지 모델링 API를 제공한다.  
+#    1. Sequential - 복잡하지 않은 단순한 네트웍을 구성할때 
+#    2. Functional - 복잡한 네트웍을 구성할때 
+
+# input layer
+inputs <- layer_input(shape = c(784))
+ 
+
+# 모형 구조 구성 
+# keras는 각 레이어를 순서에 맞게 구성하면 해당 입력 차원에 대한 명시적인 선언을 하지 않아도 된다. 
+# 해당 레이어에서 출력되는 차원을 명시하고 activation 함수를 정의한다.  
+predictions <- inputs %>%
+  layer_dense(units = 128, activation = 'sigmoid') %>% 
+  layer_dense(units = 10, activation = 'sigmoid')
+
+# 모형을 생성한다. 
+model <- keras_model(inputs = inputs, outputs = predictions)
+
+#모형 구조 출력 
+summary(model)
+
+sgd_lr <- optimizer_sgd(lr=0.01)
+#컴파일 과정을 통해 최적화 조건을 선언한다. 
+model %>% compile(
+  optimizer = sgd_lr,
+  loss = 'mse',
+  metrics = c('accuracy')
+)
+
+#학습 
+cat(py_capture_output({
+  history <- model %>% fit(
+    x_train, y_train,
+    batch_size = batch_size,
+    epochs = epochs,
+    verbose = 2
+  )
+},type = 'stdout'))
+
+#테스트셋 검증 
+score <- model %>% evaluate(
+  x_test, y_test,
+  verbose = 0
+)
+  
+cat('Test loss:', score[[1]], '\n')
+cat('Test accuracy:', score[[2]], '\n')
+
+#plot history of epoch
+plot(history)
+```
+
+
+#### 모델 재컴파일 예제
+
+
+- 학습 중간에 옵티마이저와 로스함수를 수정할 수 있다. 
+- 이 기능은 모형의 업데이트가 크지 않을때 학습율을 조정하기 쉽게 한다. 
+- 여기서는 `validation_split`옵션을 이용해 학습 데이터의 일정 부분을 테스트 하기 위한 용도로 활용하고 이 결과를 학습이 진행되는 중간 중간 출력해준다. 
+    + 별도 셋을 구분하지 않아도 일정부분의 데이터를 기반으로 각 에폭 마지막에 loss와 metric을 계산해 줄력해준다. 
+    
+
+```{r}
+inputs <- layer_input(shape = c(784))
+ 
+predictions <- inputs %>%
+  layer_dense(units = 128, activation = 'sigmoid') %>% 
+  layer_dense(units = 10, activation = 'sigmoid')
+
+
+model <- keras_model(inputs = inputs, outputs = predictions)
+
+print("Learning rate is 0.1")
+sgd_lr <- optimizer_sgd(lr=0.1)
+
+model %>% compile(
+  optimizer = sgd_lr,
+  loss = 'mse',
+  metrics = c('accuracy')
+)
+
+#학습 
+cat(py_capture_output({ 
+  history <- model %>% fit(
+    x_train, y_train,
+    batch_size = batch_size,
+    epochs = epochs,
+    verbose = 2,
+    validation_split= 0.2
+)},type = 'stdout'))
+
+
+sgd_lr <- optimizer_sgd(lr=0.01)
+print("Learning rate is 0.01")
+model %>% compile(
+  optimizer = sgd_lr,
+  loss = 'mse',
+  metrics = c('accuracy')
+)
+
+#학습
+cat(py_capture_output({ 
+  history <- model %>% fit(
+    x_train, y_train,
+    batch_size = batch_size,
+    epochs = epochs,
+    verbose = 2,
+    validation_split= 0.2
+)},type = 'stdout'))
+
+
+
+sgd_lr <- optimizer_sgd(lr=0.001)
+print("Learning rate is 0.001")
+model %>% compile(
+  optimizer = sgd_lr,
+  loss = 'mse',
+  metrics = c('accuracy')
+)
+
+#학습 
+cat(py_capture_output({
+  history <- model %>% fit(
+    x_train, y_train,
+    batch_size = batch_size,
+    epochs = epochs,
+    verbose = 2,
+    validation_split= 0.2
+)},type = 'stdout'))
+  
+```
+
+
+
+#### 정확도(accuracy)출력을 위한 함수 작성 
+
+
+```{r}
+accuracy <- function(test_x, test_y, model){
+  result <- predict(model,test_x)
+  num_correct <- apply(result, 1, which.max) == apply(test_y, 1, which.max)
+  accuracy <- sum(num_correct) / dim(result)[1]
+  print(sprintf("Accuracy on data is: %f",accuracy * 100))
+}
+accuracy(x_test, y_test, model)
+```
+
+
+### 오분류, 정분류 시각화를 통한 Error Analysis
+
+
+```{r}
+get_correct_and_incorrect <- function(model, test_x, test_y){
+  result <- predict(model,test_x)
+  correct_indices <- apply(result, 1, which.max) == apply(test_y, 1, which.max)
+  test_x_correct <- test_x[correct_indices,]
+  test_y_correct <- test_y[correct_indices,]
+  predict_test_y_correct <- result[correct_indices,]
+  incorrect_indices <- apply(result, 1, which.max) != apply(test_y, 1, which.max)
+  test_x_incorrect <- test_x[incorrect_indices,]
+  test_y_incorrect <- test_y[incorrect_indices,]
+  predict_test_y_incorrect <- result[incorrect_indices,]
+  return(list(test_x_correct, test_y_correct, test_x_incorrect, test_y_incorrect, predict_test_y_correct, predict_test_y_incorrect))
+}
+
+predit_res <- get_correct_and_incorrect(model, x_test, y_test)
+```
+
+```{r}
+print(dim(predit_res[[1]]))
+plot_examples(predit_res[[1]], predit_res[[2]], predit_res[[5]])
+```
+
+
+```{r}
+print(dim(predit_res[[3]]))
+plot_examples(predit_res[[3]], predit_res[[4]], predit_res[[6]])
+```
+
+
+
+#### MSE vs. categorical crossentropy loss functions
+
+- 카테고리컬 크로스 엔트로피 loss는 MSE보다 더 빠른 수렴 효과를 보인다.  
+- Softmax output은 10개중에 하나의 클래스를 선택하는 MNIST문제에 적합하다. 
+    + 한 노드의 확률이 높아지면 다른 노드의 확률들은 낮아져야 된다. 
+    
+```{r}
+# Softmax output layer, mse
+print("Quadratic (MSE)")
+
+inputs <- layer_input(shape = c(784))
+ 
+predictions <- inputs %>%
+  layer_dense(units = 128, activation = 'sigmoid') %>% 
+  layer_dense(units = 10, activation = 'softmax')
+
+
+model <- keras_model(inputs = inputs, outputs = predictions)
+
+
+sgd_lr <- optimizer_sgd(lr=0.001)
+
+model %>% compile(
+  optimizer = sgd_lr,
+  loss = 'mse',
+  metrics = c('accuracy')
+)
+
+cat(py_capture_output({
+  history <- model %>% fit(
+    x_train, y_train,
+    batch_size = 32,
+    epochs = 10,
+    verbose = 2,
+    validation_split= 0.2,
+    callbacks = callback_tensorboard(log_dir = "logs/mse")
+)},type = 'stdout'))
+
+
+# Softmax output layer, categorical crossentropy
+print("Categorical cross entropy")
+inputs <- layer_input(shape = c(784))
+ 
+predictions <- inputs %>%
+  layer_dense(units = 128, activation = 'sigmoid') %>% 
+  layer_dense(units = 10, activation = 'softmax')
+
+
+model <- keras_model(inputs = inputs, outputs = predictions)
+
+
+sgd_lr <- optimizer_sgd(lr=0.001)
+
+model %>% compile(
+  optimizer = sgd_lr,
+  loss = 'categorical_crossentropy',
+  metrics = c('accuracy')
+)
+
+cat(py_capture_output({
+  history <- model %>% fit(
+    x_train, y_train,
+    batch_size = 32,
+    epochs = 10,
+    verbose = 2,
+    validation_split= 0.2,
+    callbacks = callback_tensorboard(log_dir = "logs/categorical_crossentropy")
+)},type = 'stdout'))
+
+```
+
+
+#### ReLU vs. Sigmoid
+
+
+##### ReLU 
+
+- 학습을 위해 다소 적은 learning rate 필요 
+- 깊이가 얕은 네트웍에서는 Sigmoid보다 성능이 덜 나오는 경향이 있다. 
+
+```{r}
+# Relu hidden layer, 3 layer network
+inputs <- layer_input(shape = c(784))
+ 
+predictions <- inputs %>%
+  layer_dense(units = 128, activation = 'relu') %>% 
+  layer_dense(units = 10, activation = 'softmax')
+
+
+model <- keras_model(inputs = inputs, outputs = predictions)
+
+
+sgd_lr <- optimizer_sgd(lr=0.001)
+
+model %>% compile(
+  optimizer = sgd_lr,
+  loss = 'categorical_crossentropy',
+  metrics = c('accuracy')
+)
+
+cat(py_capture_output({
+  history <- model %>% fit(
+    x_train, y_train,
+    batch_size = 32,
+    epochs = 10,
+    verbose = 2,
+    validation_split= 0.2,
+    callbacks = callback_tensorboard(log_dir = "logs/relu")
+)},type = 'stdout'))
+
+```
+
+```{r}
+# Sigmoid hidden layer, 3 layer network
+inputs <- layer_input(shape = c(784))
+ 
+predictions <- inputs %>%
+  layer_dense(units = 128, activation = 'sigmoid') %>% 
+  layer_dense(units = 10, activation = 'softmax')
+
+
+model <- keras_model(inputs = inputs, outputs = predictions)
+
+sgd_lr <- optimizer_sgd(lr=0.001)
+
+model %>% compile(
+  optimizer = sgd_lr,
+  loss = 'categorical_crossentropy',
+  metrics = c('accuracy')
+)
+
+cat(py_capture_output({
+  history <- model %>% fit(
+    x_train, y_train,
+    batch_size = 32,
+    epochs = 10,
+    verbose = 2,
+    validation_split= 0.2,
+    callbacks = callback_tensorboard(log_dir = "logs/sigmoid")
+)},type = 'stdout'))
+```
+
+
+#### `Relu` 에게는 깊은 네트워크가 적합하다.
+
+
+- 깊은 네트워크일 수록 예측 능력이 뛰어나다. 
+- `Relu`는 깊은 네트워크일 수록 잘 동작하는데, 이는 positive input에 대해서 어떻게든지 gradient를 계산해서 가중치를 업데이트 하기 때문이다. 
+
+
+```{r}
+# Relu hidden layer, 6 layer network
+inputs <- layer_input(shape = c(784))
+ 
+predictions <- inputs %>%
+  layer_dense(units = 512, activation = 'relu') %>% 
+  layer_dense(units = 256, activation = 'relu') %>% 
+  layer_dense(units = 128, activation = 'relu') %>% 
+  layer_dense(units = 64, activation = 'relu') %>% 
+  layer_dense(units = 10, activation = 'softmax')
+
+
+model <- keras_model(inputs = inputs, outputs = predictions)
+
+
+sgd_lr <- optimizer_sgd(lr=0.001)
+
+model %>% compile(
+  optimizer = sgd_lr,
+  loss = 'categorical_crossentropy',
+  metrics = c('accuracy')
+)
+
+cat(py_capture_output({
+  history <- model %>% fit(
+    x_train, y_train,
+    batch_size = 32,
+    epochs = 10,
+    verbose = 2,
+    validation_split= 0.2,
+    callbacks = callback_tensorboard(log_dir = "logs/relu_6layer")
+)},type = 'stdout'))
+
+```
+
+```{r}
+# Relu hidden layer, 6 layer network
+inputs <- layer_input(shape = c(784))
+ 
+predictions <- inputs %>%
+  layer_dense(units = 512, activation = 'sigmoid') %>% 
+  layer_dense(units = 256, activation = 'sigmoid') %>% 
+  layer_dense(units = 128, activation = 'sigmoid') %>% 
+  layer_dense(units = 64, activation = 'sigmoid') %>% 
+  layer_dense(units = 10, activation = 'softmax')
+
+
+model <- keras_model(inputs = inputs, outputs = predictions)
+
+
+sgd_lr <- optimizer_sgd(lr=0.001)
+
+model %>% compile(
+  optimizer = sgd_lr,
+  loss = 'categorical_crossentropy',
+  metrics = c('accuracy')
+)
+
+cat(py_capture_output({
+  history <- model %>% fit(
+    x_train, y_train,
+    batch_size = 32,
+    epochs = 10,
+    verbose = 2,
+    validation_split= 0.2,
+    callbacks = callback_tensorboard(log_dir = "logs/sigmoid_6layer")
+)},type = 'stdout'))
+
+```
+
+
+#### 마지막 모형 학습 
+
+
+```{r}
+inputs <- layer_input(shape = c(784))
+ 
+predictions <- inputs %>%
+  layer_dense(units = 512, activation = 'relu') %>% 
+  layer_dense(units = 256, activation = 'relu') %>% 
+  layer_dense(units = 128, activation = 'relu') %>% 
+  layer_dense(units = 64, activation = 'relu') %>% 
+  layer_dense(units = 10, activation = 'softmax')
+
+
+model <- keras_model(inputs = inputs, outputs = predictions)
+
+summary(model)
+
+sgd_lr <- optimizer_sgd(lr=0.001)
+
+model %>% compile(
+  optimizer = sgd_lr,
+  loss = 'categorical_crossentropy',
+  metrics = c('accuracy')
+)
+
+cat(py_capture_output({
+  history <- model %>% fit(
+    x_train, y_train,
+    batch_size = 32,
+    epochs = 15,
+    verbose = 2,
+    validation_split= 0.2,
+    callbacks = callback_tensorboard(log_dir = "logs/final")
+)},type = 'stdout'))
+
+
+
+```
+
+
+#### 학습 데이터 기반 모형 성능
+
+```{r}
+accuracy(x_train, y_train, model)
+```
+
+
+```{r}
+final_res <- get_correct_and_incorrect(model, x_train, y_train)
+```
+
+```{r}
+print(dim(final_res[[1]]))
+plot_examples(final_res[[1]], final_res[[2]], final_res[[5]])
+```
+
+
+
+```{r}
+print(dim(final_res[[3]]))
+plot_examples(final_res[[3]], final_res[[4]], final_res[[6]])
+```
+
+
+#### 테스트 데이터 기반 모형 성능
+
+
+```{r}
+accuracy(x_test, y_test, model)
+```
+
+```{r}
+final_test_res <- get_correct_and_incorrect(model, x_test, y_test)
+```
+
+
+```{r}
+print(dim(final_test_res[[1]]))
+plot_examples(final_test_res[[1]], final_test_res[[2]], final_test_res[[5]])
+```
+
+
+```{r}
+print(dim(final_test_res[[3]]))
+plot_examples(final_test_res[[3]], final_test_res[[4]], final_test_res[[6]])
+```
+
+
+```{r,eval=F}
+#텐서보드 띄워 보기 
+tensorboard(log_dir = 'lectures/logs/',host = '0.0.0.0', port = 8002)
+```
+
+![tensorboard](TensorBoard.png)
+
+
