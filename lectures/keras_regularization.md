@@ -119,65 +119,65 @@ cat(py_capture_output({
 
     ## Train on 499 samples, validate on 4501 samples
     ## Epoch 1/30
-    ## 0s - loss: 2.0056 - acc: 0.3427 - val_loss: 1.5531 - val_acc: 0.5701
+    ## 0s - loss: 1.8857 - acc: 0.3687 - val_loss: 1.6363 - val_acc: 0.4650
     ## Epoch 2/30
-    ## 0s - loss: 1.0589 - acc: 0.7996 - val_loss: 1.2474 - val_acc: 0.6694
+    ## 0s - loss: 1.0488 - acc: 0.7735 - val_loss: 1.2258 - val_acc: 0.6685
     ## Epoch 3/30
-    ## 0s - loss: 0.7058 - acc: 0.8878 - val_loss: 1.0766 - val_acc: 0.7216
+    ## 0s - loss: 0.7082 - acc: 0.8938 - val_loss: 1.0795 - val_acc: 0.6992
     ## Epoch 4/30
-    ## 0s - loss: 0.5248 - acc: 0.9419 - val_loss: 0.9919 - val_acc: 0.7392
+    ## 0s - loss: 0.5126 - acc: 0.9339 - val_loss: 0.9963 - val_acc: 0.7207
     ## Epoch 5/30
-    ## 0s - loss: 0.4093 - acc: 0.9619 - val_loss: 0.9194 - val_acc: 0.7567
+    ## 0s - loss: 0.4103 - acc: 0.9619 - val_loss: 0.9356 - val_acc: 0.7434
     ## Epoch 6/30
-    ## 0s - loss: 0.3277 - acc: 0.9760 - val_loss: 0.8821 - val_acc: 0.7638
+    ## 0s - loss: 0.3281 - acc: 0.9780 - val_loss: 0.8964 - val_acc: 0.7518
     ## Epoch 7/30
-    ## 0s - loss: 0.2751 - acc: 0.9880 - val_loss: 0.8677 - val_acc: 0.7578
+    ## 0s - loss: 0.2795 - acc: 0.9880 - val_loss: 0.8658 - val_acc: 0.7549
     ## Epoch 8/30
-    ## 0s - loss: 0.2378 - acc: 0.9900 - val_loss: 0.8296 - val_acc: 0.7736
+    ## 0s - loss: 0.2421 - acc: 0.9900 - val_loss: 0.8435 - val_acc: 0.7547
     ## Epoch 9/30
-    ## 0s - loss: 0.2105 - acc: 0.9920 - val_loss: 0.8103 - val_acc: 0.7778
+    ## 0s - loss: 0.2177 - acc: 0.9920 - val_loss: 0.8281 - val_acc: 0.7581
     ## Epoch 10/30
-    ## 0s - loss: 0.1911 - acc: 0.9920 - val_loss: 0.7962 - val_acc: 0.7776
+    ## 0s - loss: 0.1976 - acc: 0.9960 - val_loss: 0.8105 - val_acc: 0.7638
     ## Epoch 11/30
-    ## 0s - loss: 0.1743 - acc: 0.9920 - val_loss: 0.7850 - val_acc: 0.7818
+    ## 0s - loss: 0.1823 - acc: 0.9960 - val_loss: 0.8037 - val_acc: 0.7661
     ## Epoch 12/30
-    ## 0s - loss: 0.1611 - acc: 0.9920 - val_loss: 0.7723 - val_acc: 0.7838
+    ## 0s - loss: 0.1700 - acc: 0.9960 - val_loss: 0.7894 - val_acc: 0.7694
     ## Epoch 13/30
-    ## 0s - loss: 0.1516 - acc: 0.9920 - val_loss: 0.7622 - val_acc: 0.7872
+    ## 0s - loss: 0.1598 - acc: 0.9960 - val_loss: 0.7797 - val_acc: 0.7705
     ## Epoch 14/30
-    ## 0s - loss: 0.1426 - acc: 0.9980 - val_loss: 0.7556 - val_acc: 0.7863
+    ## 0s - loss: 0.1495 - acc: 0.9960 - val_loss: 0.7731 - val_acc: 0.7729
     ## Epoch 15/30
-    ## 0s - loss: 0.1348 - acc: 0.9960 - val_loss: 0.7464 - val_acc: 0.7898
+    ## 0s - loss: 0.1423 - acc: 0.9980 - val_loss: 0.7645 - val_acc: 0.7738
     ## Epoch 16/30
-    ## 0s - loss: 0.1286 - acc: 0.9960 - val_loss: 0.7416 - val_acc: 0.7876
+    ## 0s - loss: 0.1363 - acc: 0.9980 - val_loss: 0.7596 - val_acc: 0.7718
     ## Epoch 17/30
-    ## 0s - loss: 0.1235 - acc: 0.9980 - val_loss: 0.7326 - val_acc: 0.7914
+    ## 0s - loss: 0.1300 - acc: 0.9980 - val_loss: 0.7535 - val_acc: 0.7732
     ## Epoch 18/30
-    ## 0s - loss: 0.1181 - acc: 0.9980 - val_loss: 0.7303 - val_acc: 0.7898
+    ## 0s - loss: 0.1248 - acc: 0.9980 - val_loss: 0.7458 - val_acc: 0.7763
     ## Epoch 19/30
-    ## 0s - loss: 0.1135 - acc: 0.9980 - val_loss: 0.7222 - val_acc: 0.7923
+    ## 0s - loss: 0.1200 - acc: 0.9980 - val_loss: 0.7403 - val_acc: 0.7767
     ## Epoch 20/30
-    ## 0s - loss: 0.1093 - acc: 0.9980 - val_loss: 0.7193 - val_acc: 0.7936
+    ## 0s - loss: 0.1156 - acc: 0.9980 - val_loss: 0.7349 - val_acc: 0.7787
     ## Epoch 21/30
-    ## 0s - loss: 0.1055 - acc: 0.9980 - val_loss: 0.7129 - val_acc: 0.7958
+    ## 0s - loss: 0.1114 - acc: 0.9980 - val_loss: 0.7296 - val_acc: 0.7780
     ## Epoch 22/30
-    ## 0s - loss: 0.1016 - acc: 0.9980 - val_loss: 0.7098 - val_acc: 0.7949
+    ## 0s - loss: 0.1075 - acc: 0.9980 - val_loss: 0.7253 - val_acc: 0.7812
     ## Epoch 23/30
-    ## 0s - loss: 0.0983 - acc: 0.9980 - val_loss: 0.7033 - val_acc: 0.7983
+    ## 0s - loss: 0.1037 - acc: 0.9980 - val_loss: 0.7213 - val_acc: 0.7823
     ## Epoch 24/30
-    ## 0s - loss: 0.0953 - acc: 0.9980 - val_loss: 0.7011 - val_acc: 0.7974
+    ## 0s - loss: 0.1007 - acc: 0.9980 - val_loss: 0.7197 - val_acc: 0.7812
     ## Epoch 25/30
-    ## 0s - loss: 0.0923 - acc: 1.0000 - val_loss: 0.6999 - val_acc: 0.7960
+    ## 0s - loss: 0.0973 - acc: 1.0000 - val_loss: 0.7155 - val_acc: 0.7825
     ## Epoch 26/30
-    ## 0s - loss: 0.0898 - acc: 1.0000 - val_loss: 0.6936 - val_acc: 0.7980
+    ## 0s - loss: 0.0943 - acc: 1.0000 - val_loss: 0.7095 - val_acc: 0.7858
     ## Epoch 27/30
-    ## 0s - loss: 0.0869 - acc: 1.0000 - val_loss: 0.6896 - val_acc: 0.7989
+    ## 0s - loss: 0.0917 - acc: 1.0000 - val_loss: 0.7063 - val_acc: 0.7843
     ## Epoch 28/30
-    ## 0s - loss: 0.0845 - acc: 1.0000 - val_loss: 0.6882 - val_acc: 0.7987
+    ## 0s - loss: 0.0892 - acc: 1.0000 - val_loss: 0.7053 - val_acc: 0.7825
     ## Epoch 29/30
-    ## 0s - loss: 0.0823 - acc: 1.0000 - val_loss: 0.6847 - val_acc: 0.7985
+    ## 0s - loss: 0.0867 - acc: 1.0000 - val_loss: 0.7003 - val_acc: 0.7863
     ## Epoch 30/30
-    ## 0s - loss: 0.0801 - acc: 1.0000 - val_loss: 0.6830 - val_acc: 0.7987
+    ## 0s - loss: 0.0842 - acc: 1.0000 - val_loss: 0.6974 - val_acc: 0.7867
 
 #### Helper functions
 
@@ -207,7 +207,7 @@ get_correct_and_incorrect <- function(model, test_x, test_y){
 accuracy(x_test, y_test, model)
 ```
 
-    ## [1] "Accuracy on data is: 79.310000"
+    ## [1] "Accuracy on data is: 78.930000"
 
 #### L1 and L2 weight regularization
 
@@ -270,71 +270,71 @@ cat(py_capture_output({
 
     ## Train on 499 samples, validate on 4501 samples
     ## Epoch 1/30
-    ## 0s - loss: 88.1708 - acc: 0.3587 - val_loss: 84.8603 - val_acc: 0.5237
+    ## 0s - loss: 88.2776 - acc: 0.3768 - val_loss: 84.9200 - val_acc: 0.5525
     ## Epoch 2/30
-    ## 0s - loss: 81.9642 - acc: 0.7695 - val_loss: 79.3499 - val_acc: 0.6639
+    ## 0s - loss: 82.0429 - acc: 0.7715 - val_loss: 79.3891 - val_acc: 0.7003
     ## Epoch 3/30
-    ## 0s - loss: 76.6034 - acc: 0.8697 - val_loss: 74.3825 - val_acc: 0.6790
+    ## 0s - loss: 76.6679 - acc: 0.8657 - val_loss: 74.4402 - val_acc: 0.6950
     ## Epoch 4/30
-    ## 0s - loss: 71.7159 - acc: 0.9218 - val_loss: 69.7094 - val_acc: 0.7421
+    ## 0s - loss: 71.7889 - acc: 0.9299 - val_loss: 69.7710 - val_acc: 0.7436
     ## Epoch 5/30
-    ## 0s - loss: 67.1801 - acc: 0.9599 - val_loss: 65.3891 - val_acc: 0.7529
+    ## 0s - loss: 67.2526 - acc: 0.9619 - val_loss: 65.4530 - val_acc: 0.7449
     ## Epoch 6/30
-    ## 0s - loss: 62.9584 - acc: 0.9920 - val_loss: 61.3363 - val_acc: 0.7656
+    ## 0s - loss: 63.0275 - acc: 0.9780 - val_loss: 61.3977 - val_acc: 0.7698
     ## Epoch 7/30
-    ## 0s - loss: 59.0146 - acc: 0.9940 - val_loss: 57.5528 - val_acc: 0.7776
+    ## 0s - loss: 59.0804 - acc: 0.9860 - val_loss: 57.6100 - val_acc: 0.7709
     ## Epoch 8/30
-    ## 0s - loss: 55.3262 - acc: 0.9940 - val_loss: 54.0217 - val_acc: 0.7703
+    ## 0s - loss: 55.3962 - acc: 0.9960 - val_loss: 54.0568 - val_acc: 0.7823
     ## Epoch 9/30
-    ## 0s - loss: 51.8771 - acc: 0.9960 - val_loss: 50.6958 - val_acc: 0.7783
+    ## 0s - loss: 51.9462 - acc: 0.9980 - val_loss: 50.7354 - val_acc: 0.7820
     ## Epoch 10/30
-    ## 0s - loss: 48.6478 - acc: 1.0000 - val_loss: 47.5862 - val_acc: 0.7832
+    ## 0s - loss: 48.7124 - acc: 0.9980 - val_loss: 47.6277 - val_acc: 0.7785
     ## Epoch 11/30
-    ## 0s - loss: 45.6248 - acc: 1.0000 - val_loss: 44.6632 - val_acc: 0.7885
+    ## 0s - loss: 45.6844 - acc: 1.0000 - val_loss: 44.7058 - val_acc: 0.7825
     ## Epoch 12/30
-    ## 0s - loss: 42.7900 - acc: 1.0000 - val_loss: 41.9287 - val_acc: 0.7883
+    ## 0s - loss: 42.8471 - acc: 1.0000 - val_loss: 41.9648 - val_acc: 0.7845
     ## Epoch 13/30
-    ## 0s - loss: 40.1335 - acc: 1.0000 - val_loss: 39.3615 - val_acc: 0.7896
+    ## 0s - loss: 40.1863 - acc: 1.0000 - val_loss: 39.4013 - val_acc: 0.7845
     ## Epoch 14/30
-    ## 0s - loss: 37.6416 - acc: 1.0000 - val_loss: 36.9598 - val_acc: 0.7876
+    ## 0s - loss: 37.6923 - acc: 1.0000 - val_loss: 36.9886 - val_acc: 0.7874
     ## Epoch 15/30
-    ## 0s - loss: 35.3058 - acc: 1.0000 - val_loss: 34.7022 - val_acc: 0.7889
+    ## 0s - loss: 35.3527 - acc: 1.0000 - val_loss: 34.7321 - val_acc: 0.7876
     ## Epoch 16/30
-    ## 0s - loss: 33.1158 - acc: 1.0000 - val_loss: 32.5853 - val_acc: 0.7909
+    ## 0s - loss: 33.1600 - acc: 1.0000 - val_loss: 32.6126 - val_acc: 0.7914
     ## Epoch 17/30
-    ## 0s - loss: 31.0615 - acc: 1.0000 - val_loss: 30.6035 - val_acc: 0.7905
+    ## 0s - loss: 31.1029 - acc: 1.0000 - val_loss: 30.6239 - val_acc: 0.7934
     ## Epoch 18/30
-    ## 0s - loss: 29.1348 - acc: 1.0000 - val_loss: 28.7365 - val_acc: 0.7949
+    ## 0s - loss: 29.1733 - acc: 1.0000 - val_loss: 28.7632 - val_acc: 0.7918
     ## Epoch 19/30
-    ## 0s - loss: 27.3283 - acc: 1.0000 - val_loss: 26.9901 - val_acc: 0.7938
+    ## 0s - loss: 27.3642 - acc: 1.0000 - val_loss: 27.0142 - val_acc: 0.7945
     ## Epoch 20/30
-    ## 0s - loss: 25.6333 - acc: 1.0000 - val_loss: 25.3513 - val_acc: 0.7945
+    ## 0s - loss: 25.6671 - acc: 1.0000 - val_loss: 25.3731 - val_acc: 0.7960
     ## Epoch 21/30
-    ## 0s - loss: 24.0440 - acc: 1.0000 - val_loss: 23.8145 - val_acc: 0.7974
+    ## 0s - loss: 24.0751 - acc: 1.0000 - val_loss: 23.8334 - val_acc: 0.7963
     ## Epoch 22/30
-    ## 0s - loss: 22.5534 - acc: 1.0000 - val_loss: 22.3734 - val_acc: 0.7978
+    ## 0s - loss: 22.5828 - acc: 1.0000 - val_loss: 22.3916 - val_acc: 0.7974
     ## Epoch 23/30
-    ## 0s - loss: 21.1552 - acc: 1.0000 - val_loss: 21.0222 - val_acc: 0.7985
+    ## 0s - loss: 21.1826 - acc: 1.0000 - val_loss: 21.0368 - val_acc: 0.7976
     ## Epoch 24/30
-    ## 0s - loss: 19.8438 - acc: 1.0000 - val_loss: 19.7538 - val_acc: 0.7976
+    ## 0s - loss: 19.8692 - acc: 1.0000 - val_loss: 19.7682 - val_acc: 0.7994
     ## Epoch 25/30
-    ## 0s - loss: 18.6134 - acc: 1.0000 - val_loss: 18.5643 - val_acc: 0.8023
+    ## 0s - loss: 18.6376 - acc: 1.0000 - val_loss: 18.5747 - val_acc: 0.7987
     ## Epoch 26/30
-    ## 0s - loss: 17.4596 - acc: 1.0000 - val_loss: 17.4488 - val_acc: 0.8000
+    ## 0s - loss: 17.4823 - acc: 1.0000 - val_loss: 17.4576 - val_acc: 0.7994
     ## Epoch 27/30
-    ## 0s - loss: 16.3774 - acc: 1.0000 - val_loss: 16.4013 - val_acc: 0.8025
+    ## 0s - loss: 16.3987 - acc: 1.0000 - val_loss: 16.4082 - val_acc: 0.8025
     ## Epoch 28/30
-    ## 0s - loss: 15.3624 - acc: 1.0000 - val_loss: 15.4161 - val_acc: 0.8049
+    ## 0s - loss: 15.3821 - acc: 1.0000 - val_loss: 15.4258 - val_acc: 0.8012
     ## Epoch 29/30
-    ## 0s - loss: 14.4101 - acc: 1.0000 - val_loss: 14.4965 - val_acc: 0.8040
+    ## 0s - loss: 14.4286 - acc: 1.0000 - val_loss: 14.5043 - val_acc: 0.8016
     ## Epoch 30/30
-    ## 0s - loss: 13.5171 - acc: 1.0000 - val_loss: 13.6330 - val_acc: 0.8045
+    ## 0s - loss: 13.5344 - acc: 1.0000 - val_loss: 13.6386 - val_acc: 0.8020
 
 ``` r
 accuracy(x_test, y_test, model)
 ```
 
-    ## [1] "Accuracy on data is: 80.580000"
+    ## [1] "Accuracy on data is: 80.310000"
 
 #### L1 weight regularization
 
@@ -395,71 +395,71 @@ cat(py_capture_output({
 
     ## Train on 499 samples, validate on 4501 samples
     ## Epoch 1/30
-    ## 0s - loss: 1785.2297 - acc: 0.3848 - val_loss: 1220.3727 - val_acc: 0.5146
+    ## 0s - loss: 1788.3342 - acc: 0.3828 - val_loss: 1222.8736 - val_acc: 0.5685
     ## Epoch 2/30
-    ## 0s - loss: 852.7304 - acc: 0.7615 - val_loss: 482.5384 - val_acc: 0.6392
+    ## 0s - loss: 854.7837 - acc: 0.7776 - val_loss: 484.6151 - val_acc: 0.4817
     ## Epoch 3/30
-    ## 0s - loss: 280.0506 - acc: 0.6473 - val_loss: 115.0753 - val_acc: 0.3039
+    ## 0s - loss: 280.8579 - acc: 0.6513 - val_loss: 107.8897 - val_acc: 0.4392
     ## Epoch 4/30
-    ## 0s - loss: 71.5677 - acc: 0.3186 - val_loss: 66.7889 - val_acc: 0.1069
+    ## 0s - loss: 70.7797 - acc: 0.3547 - val_loss: 66.7029 - val_acc: 0.0906
     ## Epoch 5/30
-    ## 0s - loss: 63.9500 - acc: 0.2044 - val_loss: 64.4912 - val_acc: 0.2322
+    ## 0s - loss: 62.8874 - acc: 0.2204 - val_loss: 68.6644 - val_acc: 0.1560
     ## Epoch 6/30
-    ## 0s - loss: 63.0584 - acc: 0.2385 - val_loss: 66.5936 - val_acc: 0.1991
+    ## 0s - loss: 63.7823 - acc: 0.2004 - val_loss: 61.8840 - val_acc: 0.2384
     ## Epoch 7/30
-    ## 0s - loss: 61.3745 - acc: 0.2605 - val_loss: 58.0090 - val_acc: 0.2419
+    ## 0s - loss: 61.7316 - acc: 0.2104 - val_loss: 60.6562 - val_acc: 0.3510
     ## Epoch 8/30
-    ## 0s - loss: 61.0569 - acc: 0.2204 - val_loss: 58.4634 - val_acc: 0.1393
+    ## 0s - loss: 61.0315 - acc: 0.2685 - val_loss: 59.0955 - val_acc: 0.3064
     ## Epoch 9/30
-    ## 0s - loss: 61.4836 - acc: 0.2485 - val_loss: 61.5128 - val_acc: 0.1073
+    ## 0s - loss: 60.9942 - acc: 0.2545 - val_loss: 61.5167 - val_acc: 0.2353
     ## Epoch 10/30
-    ## 0s - loss: 62.6924 - acc: 0.2305 - val_loss: 62.4906 - val_acc: 0.1866
+    ## 0s - loss: 62.8333 - acc: 0.2224 - val_loss: 59.9431 - val_acc: 0.0984
     ## Epoch 11/30
-    ## 0s - loss: 60.0915 - acc: 0.2665 - val_loss: 62.7789 - val_acc: 0.2535
+    ## 0s - loss: 62.8444 - acc: 0.2305 - val_loss: 65.0958 - val_acc: 0.1626
     ## Epoch 12/30
-    ## 0s - loss: 61.8833 - acc: 0.2184 - val_loss: 60.1265 - val_acc: 0.2044
+    ## 0s - loss: 63.5020 - acc: 0.1844 - val_loss: 60.8161 - val_acc: 0.1126
     ## Epoch 13/30
-    ## 0s - loss: 62.2545 - acc: 0.2365 - val_loss: 63.1126 - val_acc: 0.2446
+    ## 0s - loss: 60.3590 - acc: 0.2405 - val_loss: 59.4412 - val_acc: 0.2899
     ## Epoch 14/30
-    ## 0s - loss: 61.5555 - acc: 0.2405 - val_loss: 64.7248 - val_acc: 0.1955
+    ## 0s - loss: 61.2889 - acc: 0.2285 - val_loss: 64.5462 - val_acc: 0.1740
     ## Epoch 15/30
-    ## 0s - loss: 61.3534 - acc: 0.2064 - val_loss: 67.5796 - val_acc: 0.2266
+    ## 0s - loss: 60.3224 - acc: 0.2265 - val_loss: 63.4935 - val_acc: 0.2293
     ## Epoch 16/30
-    ## 0s - loss: 62.0704 - acc: 0.2605 - val_loss: 62.5856 - val_acc: 0.1888
+    ## 0s - loss: 60.1980 - acc: 0.2385 - val_loss: 63.8623 - val_acc: 0.1911
     ## Epoch 17/30
-    ## 0s - loss: 61.2334 - acc: 0.1904 - val_loss: 60.5134 - val_acc: 0.1975
+    ## 0s - loss: 60.9271 - acc: 0.2325 - val_loss: 62.5651 - val_acc: 0.2799
     ## Epoch 18/30
-    ## 0s - loss: 59.1037 - acc: 0.2385 - val_loss: 64.9267 - val_acc: 0.1031
+    ## 0s - loss: 60.6013 - acc: 0.2104 - val_loss: 63.1358 - val_acc: 0.0989
     ## Epoch 19/30
-    ## 0s - loss: 60.0951 - acc: 0.2405 - val_loss: 66.8212 - val_acc: 0.1775
+    ## 0s - loss: 60.9249 - acc: 0.2285 - val_loss: 55.1772 - val_acc: 0.3461
     ## Epoch 20/30
-    ## 0s - loss: 61.5159 - acc: 0.2204 - val_loss: 62.8443 - val_acc: 0.0878
+    ## 0s - loss: 57.8489 - acc: 0.2685 - val_loss: 62.7711 - val_acc: 0.2220
     ## Epoch 21/30
-    ## 0s - loss: 60.1841 - acc: 0.2325 - val_loss: 61.3460 - val_acc: 0.1997
+    ## 0s - loss: 62.4322 - acc: 0.1543 - val_loss: 67.0223 - val_acc: 0.2364
     ## Epoch 22/30
-    ## 0s - loss: 60.2358 - acc: 0.2044 - val_loss: 58.4594 - val_acc: 0.2802
+    ## 0s - loss: 59.0988 - acc: 0.3066 - val_loss: 56.3118 - val_acc: 0.2188
     ## Epoch 23/30
-    ## 0s - loss: 59.3979 - acc: 0.2345 - val_loss: 58.2181 - val_acc: 0.1238
+    ## 0s - loss: 58.1392 - acc: 0.2425 - val_loss: 64.7004 - val_acc: 0.1797
     ## Epoch 24/30
-    ## 0s - loss: 59.3613 - acc: 0.2425 - val_loss: 56.2199 - val_acc: 0.2188
+    ## 0s - loss: 59.5388 - acc: 0.2144 - val_loss: 61.7567 - val_acc: 0.1746
     ## Epoch 25/30
-    ## 0s - loss: 59.0373 - acc: 0.2505 - val_loss: 68.2091 - val_acc: 0.1497
+    ## 0s - loss: 57.8003 - acc: 0.2605 - val_loss: 60.4283 - val_acc: 0.1173
     ## Epoch 26/30
-    ## 0s - loss: 60.4352 - acc: 0.2144 - val_loss: 66.9557 - val_acc: 0.1569
+    ## 0s - loss: 57.7487 - acc: 0.2285 - val_loss: 59.7629 - val_acc: 0.2097
     ## Epoch 27/30
-    ## 0s - loss: 59.0127 - acc: 0.2184 - val_loss: 59.0704 - val_acc: 0.1537
+    ## 0s - loss: 58.5914 - acc: 0.2305 - val_loss: 64.2916 - val_acc: 0.0944
     ## Epoch 28/30
-    ## 0s - loss: 57.6234 - acc: 0.2505 - val_loss: 58.1992 - val_acc: 0.2084
+    ## 0s - loss: 59.2083 - acc: 0.2285 - val_loss: 62.6276 - val_acc: 0.2251
     ## Epoch 29/30
-    ## 0s - loss: 57.9505 - acc: 0.2325 - val_loss: 59.2909 - val_acc: 0.3097
+    ## 0s - loss: 57.1372 - acc: 0.2625 - val_loss: 62.7807 - val_acc: 0.2426
     ## Epoch 30/30
-    ## 0s - loss: 56.8575 - acc: 0.2826 - val_loss: 61.6420 - val_acc: 0.3253
+    ## 0s - loss: 58.0849 - acc: 0.2405 - val_loss: 60.0844 - val_acc: 0.2935
 
 ``` r
 accuracy(x_test, y_test, model)
 ```
 
-    ## [1] "Accuracy on data is: 31.370000"
+    ## [1] "Accuracy on data is: 28.260000"
 
 #### Dropout
 
@@ -525,71 +525,71 @@ cat(py_capture_output({
 
     ## Train on 499 samples, validate on 4501 samples
     ## Epoch 1/30
-    ## 0s - loss: 2.2396 - acc: 0.2505 - val_loss: 1.5683 - val_acc: 0.5425
+    ## 0s - loss: 2.4647 - acc: 0.2285 - val_loss: 1.7450 - val_acc: 0.4395
     ## Epoch 2/30
-    ## 0s - loss: 1.4942 - acc: 0.4870 - val_loss: 1.2963 - val_acc: 0.6241
+    ## 0s - loss: 1.5327 - acc: 0.5110 - val_loss: 1.3272 - val_acc: 0.5939
     ## Epoch 3/30
-    ## 0s - loss: 1.1086 - acc: 0.6874 - val_loss: 1.1065 - val_acc: 0.6983
+    ## 0s - loss: 1.1860 - acc: 0.6353 - val_loss: 1.1401 - val_acc: 0.6701
     ## Epoch 4/30
-    ## 0s - loss: 0.9636 - acc: 0.7275 - val_loss: 0.9713 - val_acc: 0.7358
+    ## 0s - loss: 0.9534 - acc: 0.6934 - val_loss: 1.0631 - val_acc: 0.6652
     ## Epoch 5/30
-    ## 0s - loss: 0.7768 - acc: 0.7836 - val_loss: 0.8931 - val_acc: 0.7592
+    ## 0s - loss: 0.8049 - acc: 0.7495 - val_loss: 0.9144 - val_acc: 0.7394
     ## Epoch 6/30
-    ## 0s - loss: 0.6749 - acc: 0.8236 - val_loss: 0.8310 - val_acc: 0.7698
+    ## 0s - loss: 0.6815 - acc: 0.8116 - val_loss: 0.8490 - val_acc: 0.7656
     ## Epoch 7/30
-    ## 0s - loss: 0.6095 - acc: 0.8417 - val_loss: 0.7930 - val_acc: 0.7732
+    ## 0s - loss: 0.6401 - acc: 0.8056 - val_loss: 0.8113 - val_acc: 0.7645
     ## Epoch 8/30
-    ## 0s - loss: 0.5373 - acc: 0.8517 - val_loss: 0.7667 - val_acc: 0.7785
+    ## 0s - loss: 0.5556 - acc: 0.8417 - val_loss: 0.7690 - val_acc: 0.7832
     ## Epoch 9/30
-    ## 0s - loss: 0.4906 - acc: 0.8677 - val_loss: 0.7473 - val_acc: 0.7792
+    ## 0s - loss: 0.5033 - acc: 0.8617 - val_loss: 0.7553 - val_acc: 0.7794
     ## Epoch 10/30
-    ## 0s - loss: 0.4308 - acc: 0.8878 - val_loss: 0.7187 - val_acc: 0.7832
+    ## 0s - loss: 0.4982 - acc: 0.8617 - val_loss: 0.7349 - val_acc: 0.7843
     ## Epoch 11/30
-    ## 0s - loss: 0.4454 - acc: 0.8818 - val_loss: 0.6940 - val_acc: 0.7920
+    ## 0s - loss: 0.4426 - acc: 0.8958 - val_loss: 0.7047 - val_acc: 0.7947
     ## Epoch 12/30
-    ## 0s - loss: 0.3915 - acc: 0.8918 - val_loss: 0.6893 - val_acc: 0.7876
+    ## 0s - loss: 0.3985 - acc: 0.8958 - val_loss: 0.6851 - val_acc: 0.7969
     ## Epoch 13/30
-    ## 0s - loss: 0.3171 - acc: 0.9279 - val_loss: 0.6742 - val_acc: 0.7969
+    ## 0s - loss: 0.3768 - acc: 0.9098 - val_loss: 0.6890 - val_acc: 0.7887
     ## Epoch 14/30
-    ## 0s - loss: 0.3165 - acc: 0.9198 - val_loss: 0.6649 - val_acc: 0.8038
+    ## 0s - loss: 0.3130 - acc: 0.9279 - val_loss: 0.6692 - val_acc: 0.7998
     ## Epoch 15/30
-    ## 0s - loss: 0.2935 - acc: 0.9319 - val_loss: 0.6424 - val_acc: 0.8043
+    ## 0s - loss: 0.3028 - acc: 0.9259 - val_loss: 0.6670 - val_acc: 0.7918
     ## Epoch 16/30
-    ## 0s - loss: 0.2756 - acc: 0.9459 - val_loss: 0.6371 - val_acc: 0.8045
+    ## 0s - loss: 0.2975 - acc: 0.9399 - val_loss: 0.6532 - val_acc: 0.7943
     ## Epoch 17/30
-    ## 0s - loss: 0.2798 - acc: 0.9319 - val_loss: 0.6245 - val_acc: 0.8100
+    ## 0s - loss: 0.2881 - acc: 0.9359 - val_loss: 0.6457 - val_acc: 0.7987
     ## Epoch 18/30
-    ## 0s - loss: 0.2467 - acc: 0.9499 - val_loss: 0.6245 - val_acc: 0.8069
+    ## 0s - loss: 0.2592 - acc: 0.9279 - val_loss: 0.6302 - val_acc: 0.8029
     ## Epoch 19/30
-    ## 0s - loss: 0.2252 - acc: 0.9619 - val_loss: 0.6141 - val_acc: 0.8149
+    ## 0s - loss: 0.2405 - acc: 0.9479 - val_loss: 0.6175 - val_acc: 0.8076
     ## Epoch 20/30
-    ## 0s - loss: 0.2177 - acc: 0.9559 - val_loss: 0.6040 - val_acc: 0.8163
+    ## 0s - loss: 0.2276 - acc: 0.9559 - val_loss: 0.6078 - val_acc: 0.8105
     ## Epoch 21/30
-    ## 0s - loss: 0.2125 - acc: 0.9579 - val_loss: 0.5978 - val_acc: 0.8198
+    ## 0s - loss: 0.2123 - acc: 0.9579 - val_loss: 0.6077 - val_acc: 0.8096
     ## Epoch 22/30
-    ## 0s - loss: 0.1995 - acc: 0.9719 - val_loss: 0.5987 - val_acc: 0.8149
+    ## 0s - loss: 0.1979 - acc: 0.9619 - val_loss: 0.6081 - val_acc: 0.8123
     ## Epoch 23/30
-    ## 0s - loss: 0.1868 - acc: 0.9699 - val_loss: 0.5925 - val_acc: 0.8212
+    ## 0s - loss: 0.1852 - acc: 0.9639 - val_loss: 0.5956 - val_acc: 0.8127
     ## Epoch 24/30
-    ## 0s - loss: 0.1955 - acc: 0.9639 - val_loss: 0.5877 - val_acc: 0.8192
+    ## 0s - loss: 0.1930 - acc: 0.9599 - val_loss: 0.5860 - val_acc: 0.8145
     ## Epoch 25/30
-    ## 0s - loss: 0.1779 - acc: 0.9679 - val_loss: 0.5811 - val_acc: 0.8198
+    ## 0s - loss: 0.1829 - acc: 0.9579 - val_loss: 0.5909 - val_acc: 0.8096
     ## Epoch 26/30
-    ## 0s - loss: 0.1641 - acc: 0.9719 - val_loss: 0.5810 - val_acc: 0.8205
+    ## 0s - loss: 0.1932 - acc: 0.9599 - val_loss: 0.5855 - val_acc: 0.8152
     ## Epoch 27/30
-    ## 0s - loss: 0.1634 - acc: 0.9679 - val_loss: 0.5802 - val_acc: 0.8198
+    ## 0s - loss: 0.1449 - acc: 0.9780 - val_loss: 0.5822 - val_acc: 0.8163
     ## Epoch 28/30
-    ## 0s - loss: 0.1598 - acc: 0.9659 - val_loss: 0.5739 - val_acc: 0.8189
+    ## 0s - loss: 0.1571 - acc: 0.9739 - val_loss: 0.5803 - val_acc: 0.8129
     ## Epoch 29/30
-    ## 0s - loss: 0.1462 - acc: 0.9760 - val_loss: 0.5666 - val_acc: 0.8265
+    ## 0s - loss: 0.1560 - acc: 0.9639 - val_loss: 0.5700 - val_acc: 0.8194
     ## Epoch 30/30
-    ## 0s - loss: 0.1352 - acc: 0.9860 - val_loss: 0.5704 - val_acc: 0.8232
+    ## 0s - loss: 0.1332 - acc: 0.9800 - val_loss: 0.5680 - val_acc: 0.8238
 
 ``` r
 accuracy(x_test, y_test, model)
 ```
 
-    ## [1] "Accuracy on data is: 81.920000"
+    ## [1] "Accuracy on data is: 81.730000"
 
 #### Combining different types of regularization
 
@@ -653,73 +653,73 @@ cat(py_capture_output({
 
     ## Train on 499 samples, validate on 4501 samples
     ## Epoch 1/30
-    ## 0s - loss: 112.2160 - acc: 0.3186 - val_loss: 107.7351 - val_acc: 0.6219
+    ## 0s - loss: 112.1988 - acc: 0.3226 - val_loss: 107.7501 - val_acc: 0.5312
     ## Epoch 2/30
-    ## 0s - loss: 104.5343 - acc: 0.6393 - val_loss: 100.9413 - val_acc: 0.6499
+    ## 0s - loss: 104.3865 - acc: 0.6774 - val_loss: 100.7643 - val_acc: 0.7178
     ## Epoch 3/30
-    ## 0s - loss: 97.7437 - acc: 0.8096 - val_loss: 94.6192 - val_acc: 0.7236
+    ## 0s - loss: 97.6950 - acc: 0.7856 - val_loss: 94.4947 - val_acc: 0.7343
     ## Epoch 4/30
-    ## 0s - loss: 91.5911 - acc: 0.8557 - val_loss: 88.6806 - val_acc: 0.7765
+    ## 0s - loss: 91.5106 - acc: 0.8637 - val_loss: 88.6405 - val_acc: 0.7425
     ## Epoch 5/30
-    ## 0s - loss: 85.8799 - acc: 0.8858 - val_loss: 83.1937 - val_acc: 0.7947
+    ## 0s - loss: 85.7811 - acc: 0.8717 - val_loss: 83.1100 - val_acc: 0.7863
     ## Epoch 6/30
-    ## 0s - loss: 80.4959 - acc: 0.9078 - val_loss: 78.0556 - val_acc: 0.7969
+    ## 0s - loss: 80.4516 - acc: 0.8818 - val_loss: 77.9692 - val_acc: 0.7978
     ## Epoch 7/30
-    ## 0s - loss: 75.4605 - acc: 0.9178 - val_loss: 73.2524 - val_acc: 0.8025
+    ## 0s - loss: 75.4161 - acc: 0.9238 - val_loss: 73.1607 - val_acc: 0.8020
     ## Epoch 8/30
-    ## 0s - loss: 70.7796 - acc: 0.9419 - val_loss: 68.7351 - val_acc: 0.8083
+    ## 0s - loss: 70.7030 - acc: 0.9459 - val_loss: 68.6723 - val_acc: 0.7932
     ## Epoch 9/30
-    ## 0s - loss: 66.4126 - acc: 0.9299 - val_loss: 64.4925 - val_acc: 0.8080
+    ## 0s - loss: 66.3231 - acc: 0.9459 - val_loss: 64.4085 - val_acc: 0.8183
     ## Epoch 10/30
-    ## 0s - loss: 62.2594 - acc: 0.9619 - val_loss: 60.5213 - val_acc: 0.8200
+    ## 0s - loss: 62.1960 - acc: 0.9519 - val_loss: 60.4657 - val_acc: 0.8092
     ## Epoch 11/30
-    ## 0s - loss: 58.3965 - acc: 0.9639 - val_loss: 56.7890 - val_acc: 0.8223
+    ## 0s - loss: 58.3136 - acc: 0.9739 - val_loss: 56.7211 - val_acc: 0.8263
     ## Epoch 12/30
-    ## 0s - loss: 54.7713 - acc: 0.9619 - val_loss: 53.2896 - val_acc: 0.8258
+    ## 0s - loss: 54.6940 - acc: 0.9800 - val_loss: 53.2291 - val_acc: 0.8263
     ## Epoch 13/30
-    ## 0s - loss: 51.3562 - acc: 0.9860 - val_loss: 50.0133 - val_acc: 0.8289
+    ## 0s - loss: 51.2856 - acc: 0.9880 - val_loss: 49.9624 - val_acc: 0.8274
     ## Epoch 14/30
-    ## 0s - loss: 48.1587 - acc: 0.9860 - val_loss: 46.9399 - val_acc: 0.8307
+    ## 0s - loss: 48.1141 - acc: 0.9860 - val_loss: 46.8887 - val_acc: 0.8271
     ## Epoch 15/30
-    ## 0s - loss: 45.1754 - acc: 0.9840 - val_loss: 44.0489 - val_acc: 0.8360
+    ## 0s - loss: 45.1247 - acc: 0.9840 - val_loss: 44.0231 - val_acc: 0.8236
     ## Epoch 16/30
-    ## 0s - loss: 42.3787 - acc: 0.9840 - val_loss: 41.3556 - val_acc: 0.8356
+    ## 0s - loss: 42.3251 - acc: 0.9900 - val_loss: 41.3173 - val_acc: 0.8285
     ## Epoch 17/30
-    ## 0s - loss: 39.7404 - acc: 0.9920 - val_loss: 38.8238 - val_acc: 0.8318
+    ## 0s - loss: 39.7111 - acc: 0.9880 - val_loss: 38.7896 - val_acc: 0.8265
     ## Epoch 18/30
-    ## 0s - loss: 37.2721 - acc: 0.9940 - val_loss: 36.4492 - val_acc: 0.8347
+    ## 0s - loss: 37.2420 - acc: 0.9840 - val_loss: 36.4155 - val_acc: 0.8278
     ## Epoch 19/30
-    ## 0s - loss: 34.9669 - acc: 0.9940 - val_loss: 34.2052 - val_acc: 0.8389
+    ## 0s - loss: 34.9385 - acc: 0.9840 - val_loss: 34.1767 - val_acc: 0.8365
     ## Epoch 20/30
-    ## 0s - loss: 32.7975 - acc: 0.9920 - val_loss: 32.1161 - val_acc: 0.8349
+    ## 0s - loss: 32.7591 - acc: 0.9940 - val_loss: 32.0929 - val_acc: 0.8327
     ## Epoch 21/30
-    ## 0s - loss: 30.7575 - acc: 0.9980 - val_loss: 30.1569 - val_acc: 0.8347
+    ## 0s - loss: 30.7229 - acc: 0.9980 - val_loss: 30.1240 - val_acc: 0.8374
     ## Epoch 22/30
-    ## 0s - loss: 28.8517 - acc: 0.9980 - val_loss: 28.3271 - val_acc: 0.8360
+    ## 0s - loss: 28.8185 - acc: 0.9960 - val_loss: 28.2957 - val_acc: 0.8323
     ## Epoch 23/30
-    ## 0s - loss: 27.0614 - acc: 0.9980 - val_loss: 26.5868 - val_acc: 0.8436
+    ## 0s - loss: 27.0290 - acc: 0.9920 - val_loss: 26.5679 - val_acc: 0.8360
     ## Epoch 24/30
-    ## 0s - loss: 25.3779 - acc: 1.0000 - val_loss: 24.9682 - val_acc: 0.8374
+    ## 0s - loss: 25.3539 - acc: 0.9960 - val_loss: 24.9383 - val_acc: 0.8389
     ## Epoch 25/30
-    ## 0s - loss: 23.8075 - acc: 0.9960 - val_loss: 23.4496 - val_acc: 0.8451
+    ## 0s - loss: 23.7868 - acc: 0.9980 - val_loss: 23.4229 - val_acc: 0.8411
     ## Epoch 26/30
-    ## 0s - loss: 22.3358 - acc: 0.9940 - val_loss: 22.0349 - val_acc: 0.8391
+    ## 0s - loss: 22.3167 - acc: 0.9940 - val_loss: 22.0000 - val_acc: 0.8418
     ## Epoch 27/30
-    ## 0s - loss: 20.9489 - acc: 1.0000 - val_loss: 20.6936 - val_acc: 0.8431
+    ## 0s - loss: 20.9232 - acc: 1.0000 - val_loss: 20.6655 - val_acc: 0.8385
     ## Epoch 28/30
-    ## 0s - loss: 19.6474 - acc: 0.9980 - val_loss: 19.4332 - val_acc: 0.8438
+    ## 0s - loss: 19.6278 - acc: 1.0000 - val_loss: 19.4157 - val_acc: 0.8396
     ## Epoch 29/30
-    ## 0s - loss: 18.4272 - acc: 1.0000 - val_loss: 18.2538 - val_acc: 0.8449
+    ## 0s - loss: 18.4166 - acc: 0.9960 - val_loss: 18.2294 - val_acc: 0.8451
     ## Epoch 30/30
-    ## 0s - loss: 17.2813 - acc: 1.0000 - val_loss: 17.1515 - val_acc: 0.8451
+    ## 0s - loss: 17.2699 - acc: 1.0000 - val_loss: 17.1393 - val_acc: 0.8385
 
 ``` r
 accuracy(x_test, y_test, model)
 ```
 
-    ## [1] "Accuracy on data is: 84.440000"
+    ## [1] "Accuracy on data is: 83.850000"
 
 ``` r
 #텐서보드 띄워 보기 
-tensorboard(log_dir = 'logs2/',host = '0.0.0.0', port = 8002)
+tensorboard(log_dir = 'lectures/logs2/',host = '0.0.0.0', port = 8002)
 ```

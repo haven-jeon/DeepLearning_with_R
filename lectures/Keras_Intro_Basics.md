@@ -149,25 +149,25 @@ cat(py_capture_output({
 ```
 
     ## Epoch 1/10
-    ## 2s - loss: 0.0863 - acc: 0.4224
+    ## 2s - loss: 0.0877 - acc: 0.3918
     ## Epoch 2/10
-    ## 1s - loss: 0.0601 - acc: 0.6751
+    ## 1s - loss: 0.0602 - acc: 0.6669
     ## Epoch 3/10
-    ## 1s - loss: 0.0498 - acc: 0.7624
+    ## 1s - loss: 0.0495 - acc: 0.7590
     ## Epoch 4/10
-    ## 1s - loss: 0.0430 - acc: 0.8078
+    ## 1s - loss: 0.0427 - acc: 0.8054
     ## Epoch 5/10
-    ## 1s - loss: 0.0383 - acc: 0.8328
+    ## 1s - loss: 0.0381 - acc: 0.8296
     ## Epoch 6/10
-    ## 1s - loss: 0.0349 - acc: 0.8481
+    ## 1s - loss: 0.0347 - acc: 0.8474
     ## Epoch 7/10
-    ## 1s - loss: 0.0323 - acc: 0.8602
+    ## 1s - loss: 0.0320 - acc: 0.8587
     ## Epoch 8/10
-    ## 1s - loss: 0.0302 - acc: 0.8682
+    ## 1s - loss: 0.0300 - acc: 0.8680
     ## Epoch 9/10
-    ## 1s - loss: 0.0286 - acc: 0.8749
+    ## 1s - loss: 0.0283 - acc: 0.8742
     ## Epoch 10/10
-    ## 1s - loss: 0.0272 - acc: 0.8802
+    ## 1s - loss: 0.0269 - acc: 0.8796
 
 ``` r
 #테스트셋 검증 
@@ -179,13 +179,13 @@ score <- model %>% evaluate(
 cat('Test loss:', score[[1]], '\n')
 ```
 
-    ## Test loss: 0.02628412
+    ## Test loss: 0.02578897
 
 ``` r
 cat('Test accuracy:', score[[2]], '\n')
 ```
 
-    ## Test accuracy: 0.8824
+    ## Test accuracy: 0.8865
 
 ``` r
 #plot history of epoch
@@ -238,25 +238,25 @@ cat(py_capture_output({
 
     ## Train on 48000 samples, validate on 12000 samples
     ## Epoch 1/10
-    ## 1s - loss: 0.0502 - acc: 0.7232 - val_loss: 0.0305 - val_acc: 0.8641
+    ## 1s - loss: 0.0509 - acc: 0.7289 - val_loss: 0.0313 - val_acc: 0.8708
     ## Epoch 2/10
-    ## 1s - loss: 0.0273 - acc: 0.8720 - val_loss: 0.0221 - val_acc: 0.8970
+    ## 1s - loss: 0.0277 - acc: 0.8751 - val_loss: 0.0226 - val_acc: 0.8987
     ## Epoch 3/10
-    ## 1s - loss: 0.0218 - acc: 0.8932 - val_loss: 0.0187 - val_acc: 0.9080
+    ## 1s - loss: 0.0218 - acc: 0.8964 - val_loss: 0.0193 - val_acc: 0.9070
     ## Epoch 4/10
-    ## 1s - loss: 0.0188 - acc: 0.9057 - val_loss: 0.0168 - val_acc: 0.9151
+    ## 1s - loss: 0.0189 - acc: 0.9065 - val_loss: 0.0170 - val_acc: 0.9147
     ## Epoch 5/10
-    ## 1s - loss: 0.0169 - acc: 0.9135 - val_loss: 0.0159 - val_acc: 0.9171
+    ## 1s - loss: 0.0171 - acc: 0.9129 - val_loss: 0.0158 - val_acc: 0.9196
     ## Epoch 6/10
-    ## 1s - loss: 0.0158 - acc: 0.9188 - val_loss: 0.0147 - val_acc: 0.9237
+    ## 1s - loss: 0.0158 - acc: 0.9195 - val_loss: 0.0147 - val_acc: 0.9250
     ## Epoch 7/10
-    ## 1s - loss: 0.0148 - acc: 0.9224 - val_loss: 0.0139 - val_acc: 0.9277
+    ## 1s - loss: 0.0149 - acc: 0.9222 - val_loss: 0.0140 - val_acc: 0.9257
     ## Epoch 8/10
-    ## 1s - loss: 0.0141 - acc: 0.9245 - val_loss: 0.0134 - val_acc: 0.9297
+    ## 1s - loss: 0.0141 - acc: 0.9262 - val_loss: 0.0134 - val_acc: 0.9295
     ## Epoch 9/10
-    ## 1s - loss: 0.0134 - acc: 0.9288 - val_loss: 0.0129 - val_acc: 0.9320
+    ## 1s - loss: 0.0135 - acc: 0.9298 - val_loss: 0.0133 - val_acc: 0.9285
     ## Epoch 10/10
-    ## 1s - loss: 0.0129 - acc: 0.9306 - val_loss: 0.0126 - val_acc: 0.9325
+    ## 1s - loss: 0.0129 - acc: 0.9323 - val_loss: 0.0128 - val_acc: 0.9328
 
 ``` r
 sgd_lr <- optimizer_sgd(lr=0.01)
@@ -285,25 +285,25 @@ cat(py_capture_output({
 
     ## Train on 48000 samples, validate on 12000 samples
     ## Epoch 1/10
-    ## 1s - loss: 0.0121 - acc: 0.9354 - val_loss: 0.0120 - val_acc: 0.9347
+    ## 1s - loss: 0.0123 - acc: 0.9345 - val_loss: 0.0121 - val_acc: 0.9337
     ## Epoch 2/10
-    ## 1s - loss: 0.0117 - acc: 0.9378 - val_loss: 0.0118 - val_acc: 0.9347
+    ## 1s - loss: 0.0118 - acc: 0.9372 - val_loss: 0.0119 - val_acc: 0.9347
     ## Epoch 3/10
-    ## 1s - loss: 0.0115 - acc: 0.9390 - val_loss: 0.0117 - val_acc: 0.9362
+    ## 1s - loss: 0.0116 - acc: 0.9389 - val_loss: 0.0118 - val_acc: 0.9358
     ## Epoch 4/10
-    ## 1s - loss: 0.0113 - acc: 0.9402 - val_loss: 0.0116 - val_acc: 0.9369
+    ## 1s - loss: 0.0114 - acc: 0.9398 - val_loss: 0.0117 - val_acc: 0.9354
     ## Epoch 5/10
-    ## 1s - loss: 0.0111 - acc: 0.9413 - val_loss: 0.0116 - val_acc: 0.9357
+    ## 1s - loss: 0.0112 - acc: 0.9411 - val_loss: 0.0117 - val_acc: 0.9357
     ## Epoch 6/10
-    ## 1s - loss: 0.0110 - acc: 0.9418 - val_loss: 0.0116 - val_acc: 0.9370
+    ## 1s - loss: 0.0111 - acc: 0.9420 - val_loss: 0.0116 - val_acc: 0.9370
     ## Epoch 7/10
-    ## 1s - loss: 0.0109 - acc: 0.9425 - val_loss: 0.0115 - val_acc: 0.9377
+    ## 1s - loss: 0.0109 - acc: 0.9429 - val_loss: 0.0116 - val_acc: 0.9368
     ## Epoch 8/10
-    ## 1s - loss: 0.0107 - acc: 0.9437 - val_loss: 0.0115 - val_acc: 0.9371
+    ## 1s - loss: 0.0108 - acc: 0.9435 - val_loss: 0.0115 - val_acc: 0.9364
     ## Epoch 9/10
-    ## 1s - loss: 0.0106 - acc: 0.9442 - val_loss: 0.0115 - val_acc: 0.9369
+    ## 1s - loss: 0.0107 - acc: 0.9439 - val_loss: 0.0115 - val_acc: 0.9362
     ## Epoch 10/10
-    ## 1s - loss: 0.0106 - acc: 0.9447 - val_loss: 0.0114 - val_acc: 0.9373
+    ## 1s - loss: 0.0106 - acc: 0.9446 - val_loss: 0.0115 - val_acc: 0.9363
 
 ``` r
 sgd_lr <- optimizer_sgd(lr=0.001)
@@ -332,25 +332,25 @@ cat(py_capture_output({
 
     ## Train on 48000 samples, validate on 12000 samples
     ## Epoch 1/10
-    ## 1s - loss: 0.0104 - acc: 0.9459 - val_loss: 0.0114 - val_acc: 0.9374
+    ## 1s - loss: 0.0105 - acc: 0.9460 - val_loss: 0.0115 - val_acc: 0.9367
     ## Epoch 2/10
-    ## 1s - loss: 0.0104 - acc: 0.9460 - val_loss: 0.0114 - val_acc: 0.9373
+    ## 1s - loss: 0.0104 - acc: 0.9464 - val_loss: 0.0115 - val_acc: 0.9366
     ## Epoch 3/10
-    ## 1s - loss: 0.0104 - acc: 0.9462 - val_loss: 0.0114 - val_acc: 0.9374
+    ## 1s - loss: 0.0104 - acc: 0.9465 - val_loss: 0.0115 - val_acc: 0.9364
     ## Epoch 4/10
-    ## 1s - loss: 0.0103 - acc: 0.9462 - val_loss: 0.0114 - val_acc: 0.9374
+    ## 1s - loss: 0.0104 - acc: 0.9466 - val_loss: 0.0115 - val_acc: 0.9366
     ## Epoch 5/10
-    ## 1s - loss: 0.0103 - acc: 0.9464 - val_loss: 0.0114 - val_acc: 0.9377
+    ## 1s - loss: 0.0104 - acc: 0.9466 - val_loss: 0.0115 - val_acc: 0.9364
     ## Epoch 6/10
-    ## 1s - loss: 0.0103 - acc: 0.9465 - val_loss: 0.0114 - val_acc: 0.9377
+    ## 1s - loss: 0.0104 - acc: 0.9468 - val_loss: 0.0115 - val_acc: 0.9364
     ## Epoch 7/10
-    ## 1s - loss: 0.0103 - acc: 0.9465 - val_loss: 0.0114 - val_acc: 0.9375
+    ## 1s - loss: 0.0104 - acc: 0.9468 - val_loss: 0.0115 - val_acc: 0.9364
     ## Epoch 8/10
-    ## 1s - loss: 0.0103 - acc: 0.9467 - val_loss: 0.0114 - val_acc: 0.9373
+    ## 1s - loss: 0.0104 - acc: 0.9469 - val_loss: 0.0115 - val_acc: 0.9366
     ## Epoch 9/10
-    ## 1s - loss: 0.0103 - acc: 0.9466 - val_loss: 0.0114 - val_acc: 0.9371
+    ## 1s - loss: 0.0103 - acc: 0.9469 - val_loss: 0.0115 - val_acc: 0.9367
     ## Epoch 10/10
-    ## 1s - loss: 0.0103 - acc: 0.9467 - val_loss: 0.0114 - val_acc: 0.9374
+    ## 1s - loss: 0.0103 - acc: 0.9471 - val_loss: 0.0114 - val_acc: 0.9367
 
 #### 정확도(accuracy)출력을 위한 함수 작성
 
@@ -364,7 +364,7 @@ accuracy <- function(test_x, test_y, model){
 accuracy(x_test, y_test, model)
 ```
 
-    ## [1] "Accuracy on data is: 93.710000"
+    ## [1] "Accuracy on data is: 93.630000"
 
 ### 오분류, 정분류 시각화를 통한 Error Analysis
 
@@ -389,7 +389,7 @@ predit_res <- get_correct_and_incorrect(model, x_test, y_test)
 print(dim(predit_res[[1]]))
 ```
 
-    ## [1] 9371  784
+    ## [1] 9363  784
 
 ``` r
 plot_examples(predit_res[[1]], predit_res[[2]], predit_res[[5]])
@@ -401,7 +401,7 @@ plot_examples(predit_res[[1]], predit_res[[2]], predit_res[[5]])
 print(dim(predit_res[[3]]))
 ```
 
-    ## [1] 629 784
+    ## [1] 637 784
 
 ``` r
 plot_examples(predit_res[[3]], predit_res[[4]], predit_res[[6]])
@@ -454,25 +454,25 @@ cat(py_capture_output({
 
     ## Train on 48000 samples, validate on 12000 samples
     ## Epoch 1/10
-    ## 1s - loss: 0.0937 - acc: 0.1788 - val_loss: 0.0909 - val_acc: 0.2136
+    ## 1s - loss: 0.0968 - acc: 0.0856 - val_loss: 0.0955 - val_acc: 0.0887
     ## Epoch 2/10
-    ## 1s - loss: 0.0891 - acc: 0.2329 - val_loss: 0.0873 - val_acc: 0.2562
+    ## 1s - loss: 0.0943 - acc: 0.1005 - val_loss: 0.0934 - val_acc: 0.1082
     ## Epoch 3/10
-    ## 1s - loss: 0.0858 - acc: 0.2681 - val_loss: 0.0844 - val_acc: 0.2916
+    ## 1s - loss: 0.0923 - acc: 0.1269 - val_loss: 0.0915 - val_acc: 0.1412
     ## Epoch 4/10
-    ## 1s - loss: 0.0831 - acc: 0.2979 - val_loss: 0.0818 - val_acc: 0.3212
+    ## 1s - loss: 0.0904 - acc: 0.1648 - val_loss: 0.0896 - val_acc: 0.1788
     ## Epoch 5/10
-    ## 1s - loss: 0.0807 - acc: 0.3233 - val_loss: 0.0794 - val_acc: 0.3458
+    ## 1s - loss: 0.0884 - acc: 0.2054 - val_loss: 0.0876 - val_acc: 0.2228
     ## Epoch 6/10
-    ## 1s - loss: 0.0784 - acc: 0.3521 - val_loss: 0.0772 - val_acc: 0.3708
+    ## 1s - loss: 0.0863 - acc: 0.2472 - val_loss: 0.0855 - val_acc: 0.2633
     ## Epoch 7/10
-    ## 1s - loss: 0.0763 - acc: 0.3784 - val_loss: 0.0752 - val_acc: 0.3957
+    ## 1s - loss: 0.0842 - acc: 0.2840 - val_loss: 0.0833 - val_acc: 0.3015
     ## Epoch 8/10
-    ## 1s - loss: 0.0743 - acc: 0.4053 - val_loss: 0.0732 - val_acc: 0.4259
+    ## 1s - loss: 0.0820 - acc: 0.3189 - val_loss: 0.0811 - val_acc: 0.3361
     ## Epoch 9/10
-    ## 1s - loss: 0.0724 - acc: 0.4312 - val_loss: 0.0713 - val_acc: 0.4525
+    ## 1s - loss: 0.0799 - acc: 0.3489 - val_loss: 0.0789 - val_acc: 0.3633
     ## Epoch 10/10
-    ## 1s - loss: 0.0705 - acc: 0.4579 - val_loss: 0.0694 - val_acc: 0.4798
+    ## 1s - loss: 0.0778 - acc: 0.3779 - val_loss: 0.0768 - val_acc: 0.3946
 
 ``` r
 # Softmax output layer, categorical crossentropy
@@ -513,25 +513,25 @@ cat(py_capture_output({
 
     ## Train on 48000 samples, validate on 12000 samples
     ## Epoch 1/10
-    ## 1s - loss: 1.3991 - acc: 0.6027 - val_loss: 0.9160 - val_acc: 0.7977
+    ## 1s - loss: 1.4085 - acc: 0.6118 - val_loss: 0.9307 - val_acc: 0.7952
     ## Epoch 2/10
-    ## 1s - loss: 0.7934 - acc: 0.8141 - val_loss: 0.6550 - val_acc: 0.8522
+    ## 1s - loss: 0.8153 - acc: 0.8107 - val_loss: 0.6722 - val_acc: 0.8505
     ## Epoch 3/10
-    ## 1s - loss: 0.6214 - acc: 0.8527 - val_loss: 0.5449 - val_acc: 0.8747
+    ## 1s - loss: 0.6441 - acc: 0.8469 - val_loss: 0.5598 - val_acc: 0.8720
     ## Epoch 4/10
-    ## 1s - loss: 0.5338 - acc: 0.8724 - val_loss: 0.4829 - val_acc: 0.8843
+    ## 1s - loss: 0.5524 - acc: 0.8661 - val_loss: 0.4919 - val_acc: 0.8842
     ## Epoch 5/10
-    ## 1s - loss: 0.4786 - acc: 0.8829 - val_loss: 0.4379 - val_acc: 0.8944
+    ## 1s - loss: 0.4918 - acc: 0.8800 - val_loss: 0.4490 - val_acc: 0.8916
     ## Epoch 6/10
-    ## 1s - loss: 0.4376 - acc: 0.8916 - val_loss: 0.4086 - val_acc: 0.8990
+    ## 1s - loss: 0.4498 - acc: 0.8884 - val_loss: 0.4169 - val_acc: 0.8993
     ## Epoch 7/10
-    ## 1s - loss: 0.4070 - acc: 0.8977 - val_loss: 0.3817 - val_acc: 0.9056
+    ## 1s - loss: 0.4185 - acc: 0.8950 - val_loss: 0.3935 - val_acc: 0.9037
     ## Epoch 8/10
-    ## 1s - loss: 0.3837 - acc: 0.9031 - val_loss: 0.3630 - val_acc: 0.9063
+    ## 1s - loss: 0.3934 - acc: 0.9006 - val_loss: 0.3731 - val_acc: 0.9062
     ## Epoch 9/10
-    ## 1s - loss: 0.3630 - acc: 0.9074 - val_loss: 0.3490 - val_acc: 0.9117
+    ## 1s - loss: 0.3729 - acc: 0.9043 - val_loss: 0.3558 - val_acc: 0.9087
     ## Epoch 10/10
-    ## 1s - loss: 0.3470 - acc: 0.9102 - val_loss: 0.3343 - val_acc: 0.9133
+    ## 1s - loss: 0.3564 - acc: 0.9086 - val_loss: 0.3442 - val_acc: 0.9104
 
 #### ReLU vs. Sigmoid
 
@@ -573,25 +573,25 @@ cat(py_capture_output({
 
     ## Train on 48000 samples, validate on 12000 samples
     ## Epoch 1/10
-    ## 2s - loss: 9.4006 - acc: 0.4118 - val_loss: 7.5428 - val_acc: 0.5289
+    ## 1s - loss: 7.0273 - acc: 0.5584 - val_loss: 5.9405 - val_acc: 0.6267
     ## Epoch 2/10
-    ## 2s - loss: 7.2400 - acc: 0.5473 - val_loss: 5.8258 - val_acc: 0.6345
+    ## 1s - loss: 4.8536 - acc: 0.6927 - val_loss: 4.3083 - val_acc: 0.7279
     ## Epoch 3/10
-    ## 2s - loss: 5.7137 - acc: 0.6409 - val_loss: 4.3314 - val_acc: 0.7271
+    ## 1s - loss: 4.2936 - acc: 0.7289 - val_loss: 4.1170 - val_acc: 0.7412
     ## Epoch 4/10
-    ## 2s - loss: 4.5613 - acc: 0.7123 - val_loss: 4.2443 - val_acc: 0.7336
+    ## 1s - loss: 4.1143 - acc: 0.7411 - val_loss: 3.9842 - val_acc: 0.7489
     ## Epoch 5/10
-    ## 2s - loss: 4.3895 - acc: 0.7237 - val_loss: 4.1289 - val_acc: 0.7402
+    ## 1s - loss: 3.1038 - acc: 0.8021 - val_loss: 2.6893 - val_acc: 0.8282
     ## Epoch 6/10
-    ## 2s - loss: 3.9588 - acc: 0.7499 - val_loss: 2.9398 - val_acc: 0.8124
+    ## 1s - loss: 1.7887 - acc: 0.8826 - val_loss: 1.0682 - val_acc: 0.9283
     ## Epoch 7/10
-    ## 2s - loss: 2.9228 - acc: 0.8134 - val_loss: 2.8377 - val_acc: 0.8182
+    ## 1s - loss: 1.0322 - acc: 0.9313 - val_loss: 0.9212 - val_acc: 0.9387
     ## Epoch 8/10
-    ## 2s - loss: 2.7535 - acc: 0.8252 - val_loss: 2.6413 - val_acc: 0.8323
+    ## 1s - loss: 0.9695 - acc: 0.9352 - val_loss: 0.8362 - val_acc: 0.9442
     ## Epoch 9/10
-    ## 2s - loss: 2.7020 - acc: 0.8282 - val_loss: 2.5909 - val_acc: 0.8355
+    ## 1s - loss: 0.8652 - acc: 0.9421 - val_loss: 0.8126 - val_acc: 0.9450
     ## Epoch 10/10
-    ## 2s - loss: 2.5889 - acc: 0.8356 - val_loss: 2.4861 - val_acc: 0.8412
+    ## 1s - loss: 0.8278 - acc: 0.9447 - val_loss: 0.7858 - val_acc: 0.9468
 
 ``` r
 # Sigmoid hidden layer, 3 layer network
@@ -625,25 +625,25 @@ cat(py_capture_output({
 
     ## Train on 48000 samples, validate on 12000 samples
     ## Epoch 1/10
-    ## 1s - loss: 1.4957 - acc: 0.5850 - val_loss: 0.9559 - val_acc: 0.7969
+    ## 1s - loss: 1.4848 - acc: 0.5826 - val_loss: 0.9867 - val_acc: 0.7855
     ## Epoch 2/10
-    ## 1s - loss: 0.8395 - acc: 0.8107 - val_loss: 0.6872 - val_acc: 0.8483
+    ## 1s - loss: 0.8463 - acc: 0.8142 - val_loss: 0.6935 - val_acc: 0.8577
     ## Epoch 3/10
-    ## 1s - loss: 0.6568 - acc: 0.8467 - val_loss: 0.5664 - val_acc: 0.8715
+    ## 1s - loss: 0.6536 - acc: 0.8534 - val_loss: 0.5682 - val_acc: 0.8798
     ## Epoch 4/10
-    ## 1s - loss: 0.5600 - acc: 0.8654 - val_loss: 0.4980 - val_acc: 0.8840
+    ## 1s - loss: 0.5537 - acc: 0.8736 - val_loss: 0.4963 - val_acc: 0.8897
     ## Epoch 5/10
-    ## 1s - loss: 0.4990 - acc: 0.8776 - val_loss: 0.4529 - val_acc: 0.8922
+    ## 1s - loss: 0.4922 - acc: 0.8840 - val_loss: 0.4471 - val_acc: 0.8961
     ## Epoch 6/10
-    ## 1s - loss: 0.4562 - acc: 0.8872 - val_loss: 0.4203 - val_acc: 0.8967
+    ## 1s - loss: 0.4477 - acc: 0.8928 - val_loss: 0.4142 - val_acc: 0.9022
     ## Epoch 7/10
-    ## 1s - loss: 0.4235 - acc: 0.8942 - val_loss: 0.3950 - val_acc: 0.9006
+    ## 1s - loss: 0.4137 - acc: 0.8990 - val_loss: 0.3882 - val_acc: 0.9073
     ## Epoch 8/10
-    ## 1s - loss: 0.3983 - acc: 0.9000 - val_loss: 0.3763 - val_acc: 0.9054
+    ## 1s - loss: 0.3889 - acc: 0.9043 - val_loss: 0.3699 - val_acc: 0.9062
     ## Epoch 9/10
-    ## 1s - loss: 0.3778 - acc: 0.9041 - val_loss: 0.3603 - val_acc: 0.9057
+    ## 1s - loss: 0.3678 - acc: 0.9081 - val_loss: 0.3531 - val_acc: 0.9093
     ## Epoch 10/10
-    ## 1s - loss: 0.3601 - acc: 0.9085 - val_loss: 0.3478 - val_acc: 0.9090
+    ## 1s - loss: 0.3516 - acc: 0.9106 - val_loss: 0.3402 - val_acc: 0.9138
 
 #### `Relu` 에게는 깊은 네트워크가 적합하다.
 
@@ -686,25 +686,25 @@ cat(py_capture_output({
 
     ## Train on 48000 samples, validate on 12000 samples
     ## Epoch 1/10
-    ## 2s - loss: 2.4635 - acc: 0.8063 - val_loss: 0.5915 - val_acc: 0.9202
+    ## 2s - loss: 3.5382 - acc: 0.7453 - val_loss: 0.7275 - val_acc: 0.9097
     ## Epoch 2/10
-    ## 2s - loss: 0.4042 - acc: 0.9295 - val_loss: 0.2952 - val_acc: 0.9348
+    ## 2s - loss: 0.4336 - acc: 0.9222 - val_loss: 0.2942 - val_acc: 0.9277
     ## Epoch 3/10
-    ## 2s - loss: 0.1934 - acc: 0.9539 - val_loss: 0.2483 - val_acc: 0.9431
+    ## 2s - loss: 0.1945 - acc: 0.9520 - val_loss: 0.2380 - val_acc: 0.9437
     ## Epoch 4/10
-    ## 2s - loss: 0.1263 - acc: 0.9672 - val_loss: 0.2214 - val_acc: 0.9491
+    ## 2s - loss: 0.1296 - acc: 0.9655 - val_loss: 0.2202 - val_acc: 0.9457
     ## Epoch 5/10
-    ## 2s - loss: 0.0834 - acc: 0.9785 - val_loss: 0.2068 - val_acc: 0.9496
+    ## 2s - loss: 0.0906 - acc: 0.9763 - val_loss: 0.2027 - val_acc: 0.9513
     ## Epoch 6/10
-    ## 2s - loss: 0.0591 - acc: 0.9855 - val_loss: 0.2071 - val_acc: 0.9524
+    ## 2s - loss: 0.0660 - acc: 0.9829 - val_loss: 0.2021 - val_acc: 0.9517
     ## Epoch 7/10
-    ## 2s - loss: 0.0416 - acc: 0.9910 - val_loss: 0.2102 - val_acc: 0.9534
+    ## 2s - loss: 0.0491 - acc: 0.9880 - val_loss: 0.1972 - val_acc: 0.9538
     ## Epoch 8/10
-    ## 2s - loss: 0.0314 - acc: 0.9941 - val_loss: 0.2065 - val_acc: 0.9538
+    ## 2s - loss: 0.0381 - acc: 0.9915 - val_loss: 0.1956 - val_acc: 0.9557
     ## Epoch 9/10
-    ## 2s - loss: 0.0251 - acc: 0.9961 - val_loss: 0.2053 - val_acc: 0.9559
+    ## 2s - loss: 0.0293 - acc: 0.9943 - val_loss: 0.2027 - val_acc: 0.9560
     ## Epoch 10/10
-    ## 2s - loss: 0.0202 - acc: 0.9972 - val_loss: 0.2107 - val_acc: 0.9563
+    ## 2s - loss: 0.0240 - acc: 0.9960 - val_loss: 0.2012 - val_acc: 0.9565
 
 ``` r
 # Relu hidden layer, 6 layer network
@@ -742,25 +742,25 @@ cat(py_capture_output({
 
     ## Train on 48000 samples, validate on 12000 samples
     ## Epoch 1/10
-    ## 2s - loss: 2.3227 - acc: 0.1066 - val_loss: 2.3018 - val_acc: 0.1060
+    ## 2s - loss: 2.3113 - acc: 0.1101 - val_loss: 2.2978 - val_acc: 0.1060
     ## Epoch 2/10
-    ## 2s - loss: 2.2990 - acc: 0.1140 - val_loss: 2.2985 - val_acc: 0.1060
+    ## 2s - loss: 2.2949 - acc: 0.1140 - val_loss: 2.2937 - val_acc: 0.1062
     ## Epoch 3/10
-    ## 2s - loss: 2.2958 - acc: 0.1140 - val_loss: 2.2953 - val_acc: 0.1060
+    ## 2s - loss: 2.2909 - acc: 0.1140 - val_loss: 2.2897 - val_acc: 0.1074
     ## Epoch 4/10
-    ## 2s - loss: 2.2926 - acc: 0.1140 - val_loss: 2.2921 - val_acc: 0.1060
+    ## 2s - loss: 2.2868 - acc: 0.1166 - val_loss: 2.2856 - val_acc: 0.1061
     ## Epoch 5/10
-    ## 2s - loss: 2.2893 - acc: 0.1140 - val_loss: 2.2890 - val_acc: 0.1060
+    ## 2s - loss: 2.2825 - acc: 0.1178 - val_loss: 2.2812 - val_acc: 0.1066
     ## Epoch 6/10
-    ## 2s - loss: 2.2860 - acc: 0.1140 - val_loss: 2.2848 - val_acc: 0.1062
+    ## 2s - loss: 2.2779 - acc: 0.1217 - val_loss: 2.2763 - val_acc: 0.1133
     ## Epoch 7/10
-    ## 2s - loss: 2.2824 - acc: 0.1144 - val_loss: 2.2813 - val_acc: 0.1060
+    ## 2s - loss: 2.2729 - acc: 0.1354 - val_loss: 2.2708 - val_acc: 0.1547
     ## Epoch 8/10
-    ## 2s - loss: 2.2786 - acc: 0.1141 - val_loss: 2.2774 - val_acc: 0.1060
+    ## 2s - loss: 2.2673 - acc: 0.1581 - val_loss: 2.2652 - val_acc: 0.1675
     ## Epoch 9/10
-    ## 2s - loss: 2.2746 - acc: 0.1152 - val_loss: 2.2731 - val_acc: 0.1060
+    ## 2s - loss: 2.2611 - acc: 0.1859 - val_loss: 2.2585 - val_acc: 0.1657
     ## Epoch 10/10
-    ## 2s - loss: 2.2700 - acc: 0.1170 - val_loss: 2.2681 - val_acc: 0.1438
+    ## 2s - loss: 2.2541 - acc: 0.1884 - val_loss: 2.2508 - val_acc: 0.2093
 
 #### 마지막 모형 학습
 
@@ -825,35 +825,35 @@ cat(py_capture_output({
 
     ## Train on 48000 samples, validate on 12000 samples
     ## Epoch 1/15
-    ## 2s - loss: 7.0749 - acc: 0.5510 - val_loss: 6.6655 - val_acc: 0.5792
+    ## 2s - loss: 1.5369 - acc: 0.8391 - val_loss: 0.3904 - val_acc: 0.9133
     ## Epoch 2/15
-    ## 2s - loss: 5.5045 - acc: 0.6396 - val_loss: 2.3799 - val_acc: 0.8057
+    ## 2s - loss: 0.2730 - acc: 0.9349 - val_loss: 0.2698 - val_acc: 0.9325
     ## Epoch 3/15
-    ## 2s - loss: 0.6345 - acc: 0.9003 - val_loss: 0.2729 - val_acc: 0.9283
+    ## 2s - loss: 0.1625 - acc: 0.9564 - val_loss: 0.2172 - val_acc: 0.9470
     ## Epoch 4/15
-    ## 2s - loss: 0.1955 - acc: 0.9478 - val_loss: 0.2349 - val_acc: 0.9370
+    ## 2s - loss: 0.1109 - acc: 0.9691 - val_loss: 0.2017 - val_acc: 0.9497
     ## Epoch 5/15
-    ## 2s - loss: 0.1305 - acc: 0.9635 - val_loss: 0.2161 - val_acc: 0.9423
+    ## 2s - loss: 0.0782 - acc: 0.9786 - val_loss: 0.2040 - val_acc: 0.9488
     ## Epoch 6/15
-    ## 2s - loss: 0.0915 - acc: 0.9734 - val_loss: 0.2106 - val_acc: 0.9465
+    ## 2s - loss: 0.0578 - acc: 0.9843 - val_loss: 0.1958 - val_acc: 0.9527
     ## Epoch 7/15
-    ## 2s - loss: 0.0682 - acc: 0.9809 - val_loss: 0.2017 - val_acc: 0.9489
+    ## 2s - loss: 0.0432 - acc: 0.9888 - val_loss: 0.1896 - val_acc: 0.9534
     ## Epoch 8/15
-    ## 2s - loss: 0.0515 - acc: 0.9856 - val_loss: 0.2034 - val_acc: 0.9499
+    ## 2s - loss: 0.0327 - acc: 0.9929 - val_loss: 0.1952 - val_acc: 0.9529
     ## Epoch 9/15
-    ## 2s - loss: 0.0405 - acc: 0.9891 - val_loss: 0.1985 - val_acc: 0.9533
+    ## 2s - loss: 0.0260 - acc: 0.9948 - val_loss: 0.1933 - val_acc: 0.9571
     ## Epoch 10/15
-    ## 2s - loss: 0.0315 - acc: 0.9927 - val_loss: 0.1971 - val_acc: 0.9547
+    ## 2s - loss: 0.0207 - acc: 0.9966 - val_loss: 0.1916 - val_acc: 0.9572
     ## Epoch 11/15
-    ## 2s - loss: 0.0249 - acc: 0.9951 - val_loss: 0.2005 - val_acc: 0.9555
+    ## 2s - loss: 0.0170 - acc: 0.9977 - val_loss: 0.1951 - val_acc: 0.9574
     ## Epoch 12/15
-    ## 2s - loss: 0.0206 - acc: 0.9961 - val_loss: 0.1996 - val_acc: 0.9560
+    ## 2s - loss: 0.0146 - acc: 0.9981 - val_loss: 0.1961 - val_acc: 0.9575
     ## Epoch 13/15
-    ## 2s - loss: 0.0168 - acc: 0.9975 - val_loss: 0.2002 - val_acc: 0.9571
+    ## 2s - loss: 0.0126 - acc: 0.9988 - val_loss: 0.1956 - val_acc: 0.9584
     ## Epoch 14/15
-    ## 2s - loss: 0.0143 - acc: 0.9982 - val_loss: 0.2033 - val_acc: 0.9569
+    ## 2s - loss: 0.0112 - acc: 0.9992 - val_loss: 0.1970 - val_acc: 0.9582
     ## Epoch 15/15
-    ## 2s - loss: 0.0122 - acc: 0.9988 - val_loss: 0.2056 - val_acc: 0.9581
+    ## 2s - loss: 0.0102 - acc: 0.9994 - val_loss: 0.1993 - val_acc: 0.9589
 
 #### 학습 데이터 기반 모형 성능
 
@@ -861,7 +861,7 @@ cat(py_capture_output({
 accuracy(x_train, y_train, model)
 ```
 
-    ## [1] "Accuracy on data is: 99.091667"
+    ## [1] "Accuracy on data is: 99.138333"
 
 ``` r
 final_res <- get_correct_and_incorrect(model, x_train, y_train)
@@ -871,7 +871,7 @@ final_res <- get_correct_and_incorrect(model, x_train, y_train)
 print(dim(final_res[[1]]))
 ```
 
-    ## [1] 59455   784
+    ## [1] 59483   784
 
 ``` r
 plot_examples(final_res[[1]], final_res[[2]], final_res[[5]])
@@ -883,7 +883,7 @@ plot_examples(final_res[[1]], final_res[[2]], final_res[[5]])
 print(dim(final_res[[3]]))
 ```
 
-    ## [1] 545 784
+    ## [1] 517 784
 
 ``` r
 plot_examples(final_res[[3]], final_res[[4]], final_res[[6]])
@@ -897,7 +897,7 @@ plot_examples(final_res[[3]], final_res[[4]], final_res[[6]])
 accuracy(x_test, y_test, model)
 ```
 
-    ## [1] "Accuracy on data is: 95.590000"
+    ## [1] "Accuracy on data is: 95.980000"
 
 ``` r
 final_test_res <- get_correct_and_incorrect(model, x_test, y_test)
@@ -907,7 +907,7 @@ final_test_res <- get_correct_and_incorrect(model, x_test, y_test)
 print(dim(final_test_res[[1]]))
 ```
 
-    ## [1] 9559  784
+    ## [1] 9598  784
 
 ``` r
 plot_examples(final_test_res[[1]], final_test_res[[2]], final_test_res[[5]])
@@ -919,7 +919,7 @@ plot_examples(final_test_res[[1]], final_test_res[[2]], final_test_res[[5]])
 print(dim(final_test_res[[3]]))
 ```
 
-    ## [1] 441 784
+    ## [1] 402 784
 
 ``` r
 plot_examples(final_test_res[[3]], final_test_res[[4]], final_test_res[[6]])

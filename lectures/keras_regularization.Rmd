@@ -321,7 +321,8 @@ accuracy(x_test, y_test, model)
 
 ```{r,eval=F}
 #텐서보드 띄워 보기 
-tensorboard(log_dir = 'logs2/',host = '0.0.0.0', port = 8002)
+tensorboard(log_dir = 'lectures/logs2/',host = '0.0.0.0', port = 8002)
 ```
 
+![](TensorBoard_2.png)
 
